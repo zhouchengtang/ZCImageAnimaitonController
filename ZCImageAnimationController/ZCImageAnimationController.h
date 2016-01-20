@@ -1,7 +1,31 @@
-# ZCImageAnimaitonController
-一个简单易用的动画类 可以避免类似使用imageView动画时造成cup与内存暴增的情况 具体使用请参考Dome
+//
+//  ZCImageAnimationController.h
+//  SinaFinance
+//
+//  Created by zhoucheng on 15/7/10.
+//  Copyright (c) 2015年 sina.com. All rights reserved.
+//
 
-接口介绍：
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#define APP_ANIMATION_IMAGE_SIZE_IPHONE4     CGSizeMake(320, 480)
+#define APP_ANIMATION_IMAGE_SIZE_IPHONE5     CGSizeMake(320, 568)
+#define APP_ANIMATION_IMAGE_SIZE_IPAD        CGSizeMake(768, 576)
+#define APP_ANIMATION_IMAGE_SIZE_IPHONE6     CGSizeMake(375, 667)
+#define APP_ANIMATION_IMAGE_SIZE_IPHONE6P    CGSizeMake(414, 736)
+#define APP_ANIMATION_IMAGE_SIZE_NOT_SUPPORT CGSizeMake(0,0)
+
+/*
+#define PERFIX_IPHONE4 @"640x960"
+#define PERFIX_IPHONE5 @""
+#define PERFIX_IPHONE6 @"750x1334"
+#define PERFIX_IPHONE6P @"1242x2208"
+*/
+
+typedef void (^animationFinishBlcok)(BOOL finish);
+
+@interface ZCImageAnimationController : NSObject
 
 //动画展示视图View，如果不设置默认为UIWindow，Level为UIWindowLevelAlert
 @property(nonatomic, assign)UIView * animationView;
@@ -67,7 +91,8 @@
 
 //iOS9后window必须添加rootViewController 设置当前window.rootViewController是否可以旋转（默认NO）
 @property(nonatomic, assign)BOOL shouldAutorotate;
-
 //iOS9后window必须添加rootViewController 设置当前window.rootViewController是旋转方默认（UIInterfaceOrientationMaskPortrait）
 @property(nonatomic, assign)UIInterfaceOrientationMask supportedInterfaceOrientations;
 
+
+@end
