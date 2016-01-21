@@ -1,5 +1,5 @@
 # ZCImageAnimaitonController
-一个简单易用的动画类 可以避免类似使用imageView动画时造成cup与内存暴增的情况 具体使用请参考Dome
+一个简单易用的动画类, 可以用作开机动画与平常动画展示,能够类似使用imageView动画时造成cup与内存暴增的情况 具体使用请参考Dome
 
 接口介绍：
 
